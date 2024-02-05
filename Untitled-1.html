@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Bouquet</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(225, 175, 175);
+            font-family: Arial, sans-serif;
+        }
+        #rose-bouquet {
+            cursor: pointer;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #6c63ff;
+        }
+        #i-love-you {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #6c63ff;
+        }
+    </style>
+</head>
+<body>
+    <img id="rose-bouquet" src="https://i.postimg.cc/T2Vhc1d6/wwww.png" alt="Rose Bouquet">
+    <div id="message">Happy Rose Day!</div>
+    <div id="i-love-you">I love you!</div>
+
+    <script>
+        const roseBouquet = document.getElementById("rose-bouquet");
+        const message = document.getElementById("message");
+        const iLoveYou = document.getElementById("i-love-you");
+
+        roseBouquet.addEventListener("click", () => {
+            message.style.display = "block";
+        });
+
+        message.addEventListener("click", () => {
+            message.style.display = "none";
+            iLoveYou.style.display = "block";
+        });
+    </script>
+</body>
+</html>
